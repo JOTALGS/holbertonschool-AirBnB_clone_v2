@@ -25,6 +25,7 @@ def ctext(text):
     return 'C ' + text
 
 
+@app.route('/python', defaults={'text': "is_cool"}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pytext(text='is cool'):
     """returns py text"""
@@ -32,11 +33,10 @@ def pytext(text='is cool'):
     return 'Python  ' + text
 
 
-@app.route('/number/<n>', strict_slashes=False)
-def isnumb(number):
+@app.route('/number/<int:n>', strict_slashes=False)
+def isnumb(n):
     """returns number int"""
-    number = int(number)
-    return number + ' is a number'
+    return str(n) + ' is a number'
 
 
 if __name__ == '__main__':
