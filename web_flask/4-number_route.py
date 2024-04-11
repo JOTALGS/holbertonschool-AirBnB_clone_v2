@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask web task 1
+Flask web task 4
 """
 from flask import Flask
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def ctext(text):
 
 
 @app.route('/python/<text>', strict_slashes=False)
-def pytext(text):
+def pytext(text='is cool'):
     """returns py text"""
     text = text.replace("_", " ")
     return 'Python  ' + text
