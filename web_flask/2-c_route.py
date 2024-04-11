@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask web task 1
+Flask web task 2
 """
 from flask import Flask
 app = Flask(__name__)
@@ -16,6 +16,13 @@ def index():
 def hbnb():
     """returns HBNB"""
     return 'HBNB'
+
+
+@app.route('/c/<text>', strict_slashes=False)
+def ctext(text):
+    """returns c text"""
+    text = text.replace("_", " ")
+    return 'C ' + text
 
 
 if __name__ == '__main__':
