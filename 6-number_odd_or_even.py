@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask web task 6
+Flask web task 5
 """
 from flask import Flask, render_template
 app = Flask(__name__)
@@ -47,7 +47,7 @@ def numbert(n):
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def number_odd_or_even(n):
-    """return template with varr n"""
+    """una gar"""
     return render_template('6-number_odd_or_even.html', n=n)
 
 
