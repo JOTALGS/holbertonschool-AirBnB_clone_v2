@@ -28,7 +28,11 @@ def ctext(text):
 @app.route('/python', defaults={'text': "is_cool"}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python(text):
-    """returns py text"""
+    """
+    r
+    eturns py text 
+    is this shit checked bu sjshjdsjdasjdsa dsajkdsakjdhsad sabujsakjdbaskjdh???
+    """
     text = text.replace("_", " ")
     return 'Python  ' + text
 
