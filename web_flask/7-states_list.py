@@ -4,6 +4,8 @@ from models.state import State
 
 app = Flask(__name__)
 
+storage.reload()
+
 
 @app.teardown_appcontext
 def app_close(exception=None):
